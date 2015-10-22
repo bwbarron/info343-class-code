@@ -14,3 +14,12 @@ body {
 .fa-spin {
     display: none;
 }
+
+.completed-task {
+    color: #aaa;
+    text-decoration: line-through;
+}
+
+#rating {
+    /* raty is a font */
+}
