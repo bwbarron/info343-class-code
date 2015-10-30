@@ -12,35 +12,17 @@
         <!-- angular script file -->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
 
+        <!-- lodash library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+
+        <!-- UI router -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+
         <!-- our script file -->
         <script src="js/movies.js"></script>
 
     </head>
-    <body class="container" ng-app="Movies" ng-controller="MoviesController">
-        <h1>Movies from 2014</h1>
-
-        <p>
-            <input type="search" class="form-control" placeholder="type to filter" ng-model="query"/>
-        </p>
-
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Rating</th>
-                    <th>Released</th>
-                    <th>Gross Sales</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="movie in movies | filter : query"> <!-- searches all fields -->
-                    <!-- <tr ng-repeat="movie in movies | filter : {title: query}"> --> <!-- only searches titles -->
-                    <td>{{movie.title}}</td>
-                    <td>{{movie.rating}}</td>
-                    <td>{{movie.released | date : "MMM d"}}</td>
-                    <td>{{movie.gross | currency}}</td>
-                </tr>
-            </tbody>
-        </table>
+    <body class="container" ng-app="Movies">
+        <div ui-view></div>
     </body>
 </html>
