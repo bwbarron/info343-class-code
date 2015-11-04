@@ -24,6 +24,19 @@ tfoot td {
     font-size: 0.8em;
 }
 
+.validation-error {
+    color: #d00;
+    font-size: 0.8em;
+}
+
+form .ng-invalid .ng-dirty { /* should make border of input box red if invalid (doesn't work right now) */
+    border: 1px solid #d00;
+}
+
+form .ng-valid .ng-dirty {
+    border: 1px solid #0d0;
+}
+
 @media (min-width: 768px) {
     body {
         font-size: 18px;
